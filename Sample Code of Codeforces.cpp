@@ -27,26 +27,23 @@ using namespace std;
 int main()
 {
     //ll t,x,y,j,i,z,p=0,q=0,d,mx=0;
-    ll n,m,k,ans=0,ans1=0,c=1,p;
-    cin>>n;
-    int a[2*n];
-    cin>>a[0];
-    for(ll i=1; i<2*n; i++)
+    ll n,m,a,b,k,ans=0,t=0,c=1,p;
+    ll mx=INT_MAX;
+    cin>>n>>t;
+    for(int i=0; i<n; i++)
     {
-        cin>>a[i];
-        if(a[i]==a[i-1])
-            c++;
-    }
-    sort(a,a+2*n);
-    if(c==2*n)
-        cout<<"-1"<<endl;
-    else
-    {
-        for(ll i=0; i<2*n; i++)
+        cin>>a>>b;
+        while(a<t)
         {
-            cout<<a[i]<<" ";
+            a+=b;
+        }
+        if(a<mx)
+        {
+            mx=a;
+            ans=i+1;
         }
     }
+    cout<<ans<<endl;
 
 
 
