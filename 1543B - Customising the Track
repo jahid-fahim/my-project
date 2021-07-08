@@ -1,0 +1,52 @@
+/*بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+  Bismillah-ir-Rahman-ir-Rahim*/
+
+
+//Array
+/*initialize all value zero of a array char a[1024] = {0};*/
+//Vector
+/*initialize all value zero of a vector vector<int>vec(100,0);
+To erase 8th variable use myVector.erase(myVector.begin() + 7)
+To erase variable use myVector.swap(secondVector)*/
+//Stack
+/*Declaration of a stack is like vector.Taking input
+in stack using myStack.push(input);*/
+//Queue
+/*Declaration of a queue is queue <int> myQ;
+like vector and stack.Taking input in stack using myQ.push(input);*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define pi 3.14159265
+#define pb push_back
+
+
+int main()
+{
+    //ll t,x,y,j,i,z,p=0,q=0,d,mx=0;
+    ll n,m,k=0,a,b,i,sum=0,t=0,p=0;
+    //ll mx=INT_MAX;
+    cin>>t;
+    while(t--)
+    {
+        sum=0;
+        cin>>n;
+        b=n;
+        while(b--)
+        {
+            cin>>a;
+            sum+=a;
+        }
+        a=sum/n;//Every track will got 'a' number of cars
+        a=a*n;//Divided 'a' numbers of cars into n track
+        a=sum-a;//Remaining cars
+        p=n-a;//Dividing Remaining cars into a track
+        cout<<p*a<<endl;
+    }
+
+return 0;
+}
+//Alhamdulillah
