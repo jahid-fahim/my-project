@@ -1,0 +1,86 @@
+/*بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+  Bismillah-ir-Rahman-ir-Rahim*/
+
+
+//Array
+/*initialize all value zero of a array char a[1024] = {0};*/
+//Vector
+/*initialize all value zero of a vector vector<int>vec(100,0);
+To erase 8th variable use myVector.erase(myVector.begin() + 7)
+To erase variable use myVector.swap(secondVector)*/
+//Stack
+/*Declaration of a stack is like vector.Taking input
+in stack using myStack.push(input);*/
+//Queue
+/*Declaration of a queue is queue <int> myQ;
+like vector and stack.Taking input in stack using myQ.push(input);*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define pi 3.14159265
+#define pb push_back
+
+
+int main()
+{
+    //ll t,x,y,j,i,z,p=0,q=0,d,mx=0;
+    int n,m,k=0,a,b,i,sum=0,t=0;
+    int mn;
+    cin>>n;
+    string s;
+    cin>>s;
+    mn=INT_MAX;
+    for(i=0; i<n-4+1; i++)
+    {
+        if(s[i]!='A')
+        {
+            a=abs(s[i]-'A');
+            if(a>13)
+            {
+                sum+=(26-a);
+            }
+            else
+                sum+=a;
+        }
+        if(s[i+1]!='C')
+        {
+            a=abs(s[i+1]-'C');
+            if(a>13)
+            {
+                sum+=(26-a);
+            }
+            else
+                sum+=a;
+        }
+        if(s[i+2]!='T')
+        {
+            a=abs(s[i+2]-'T');
+            if(a>13)
+            {
+                sum+=(26-a);
+            }
+            else
+                sum+=a;
+        }
+        if(s[i+3]!='G')
+        {
+            a=abs(s[i+3]-'G');
+            if(a>13)
+            {
+                sum+=(26-a);
+            }
+            else
+                sum+=a;
+        }
+        mn=min(mn,sum);
+        sum=0;
+    }
+    cout<<mn<<endl;
+
+ return 0;
+}
+//Alhamdulillah
+
