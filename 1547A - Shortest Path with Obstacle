@@ -1,0 +1,67 @@
+/*بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+  Bismillah-ir-Rahman-ir-Rahim*/
+
+
+//Array
+/*initialize all value zero of a array char a[1024] = {0};*/
+//Vector
+/*initialize all value zero of a vector vector<int>vec(100,0);
+To erase 8th variable use myVector.erase(myVector.begin() + 7)
+To erase variable use myVector.swap(secondVector)*/
+//Stack
+/*Declaration of a stack is like vector.Taking input
+in stack using myStack.push(input);*/
+//Queue
+/*Declaration of a queue is queue <int> myQ;
+like vector and stack.Taking input in stack using myQ.push(input);*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define pi 3.14159265
+#define pb push_back
+
+
+int main()
+{
+    //ll t,x,y,j,i,z,p=0,q=0,d,mx=0;
+    int n,m,k=0,i,j,ans=0,t=0;
+    int mn;
+    char a;
+    cin>>t;
+    int xa,xb,xf,ya,yb,yf;
+    while(t--)
+    {
+        ans=0;
+        cin>>xa>>ya;
+        cin>>xb>>yb;
+        cin>>xf>>yf;
+        if(xa==xb && xb==xf)
+        {
+            if(yf>ya && yf<yb || yf>yb && yf<ya)
+                ans=abs(ya-yb)+2;
+            else
+                ans=abs(ya-yb);
+        }
+
+        else if(ya==yb && yb==yf)
+        {
+            if(xf>xa && xf<xb || xf>xb && xf<xa)
+                ans=abs(xa-xb)+2;
+            else
+                ans=abs(xa-xb);
+        }
+
+        else
+        {
+            ans=abs(xa-xb)+abs(ya-yb);
+        }
+        cout<<ans<<endl;
+    }
+
+ return 0;
+}
+//Alhamdulillah
+
