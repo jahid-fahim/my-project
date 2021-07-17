@@ -1,0 +1,84 @@
+/*بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+  Bismillah-ir-Rahman-ir-Rahim*/
+
+
+//Array
+/*initialize all value zero of a array char a[1024] = {0};*/
+//Vector
+/*initialize all value zero of a vector vector<int>vec(100,0);
+To erase 8th variable use myVector.erase(myVector.begin() + 7)
+To erase variable use myVector.swap(secondVector)*/
+//Stack
+/*Declaration of a stack is like vector.Taking input
+in stack using myStack.push(input);*/
+//Queue
+/*Declaration of a queue is queue <int> myQ;
+like vector and stack.Taking input in stack using myQ.push(input);*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define pi 3.14159265
+#define pb push_back
+
+
+int main()
+{
+    //ll t,x,y,j,i,z,p=0,q=0,d,mx=0;
+    ll n,m,k,i,j,c,ans=0,t=0,m1,m0;
+    int a,b;
+    cin>>t;
+    string s;
+    while(t--)
+    {
+        m1=m0=ans=c=0;
+        cin>>n>>a>>b;
+        cin>>s;
+        ans=n*a;
+        if(b>=0)
+            ans+=n*b;
+        else
+        {
+            for(i=0; i<n; i++)
+            {
+                if(s[i]=='1')
+                    c++;
+                else if(c>0)
+                {
+                    m1+=b;
+                    c=0;
+                }
+            }
+            if(c>0)
+            {
+                m1+=b;
+                c=0;
+            }
+            m1+=b;
+            for(i=0; i<n; i++)
+            {
+                if(s[i]=='0')
+                    c++;
+                else if(c>0)
+                {
+                    m0+=b;
+                    c=0;
+                }
+            }
+            if(c>0)
+            {
+                m0+=b;
+                c=0;
+            }
+            m0+=b;
+            ans+=max(m1,m0);
+        }
+        cout<<ans<<endl;
+    }
+
+return 0;
+}
+//Alhamdulillah
+
