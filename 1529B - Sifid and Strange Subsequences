@@ -1,0 +1,60 @@
+/*بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+  Bismillah-ir-Rahman-ir-Rahim*/
+
+
+//Array
+/*initialize all value zero of a array char a[1024] = {0};*/
+//Vector
+/*initialize all value zero of a vector vector<int>vec(100,0);
+To erase 8th variable use myVector.erase(myVector.begin() + 7)
+To erase variable use myVector.swap(secondVector)*/
+//Stack
+/*Declaration of a stack is like vector.Taking input
+in stack using myStack.push(input);*/
+//Queue
+/*Declaration of a queue is queue <int> myQ;
+like vector and stack.Taking input in stack using myQ.push(input);*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define pi 3.14159265
+#define pb push_back
+
+
+int main()
+{
+    //ll t,x,y,j,i,z,p=0,q=0,d,mx=0;
+    ll n,m,p,i,j,mx,t=0,ans,k,d;
+    //char c;
+    cin>>t;
+    //string s,s1;
+
+    while(t--)
+    {
+        ans=1;
+        mx=INT_MAX;
+        cin>>n;
+        vector<ll>a;
+        for(i=0; i<n; i++)
+        {
+            cin>>p;
+            a.pb(p);
+        }
+        sort(a.begin(),a.end());
+        for(i=1; i<n; i++)
+        {
+            mx=min(mx,a[i]-a[i-1]);
+            if(mx<a[i])
+                break;
+            ans++;
+        }
+        cout<<ans<<endl;
+    }
+
+ return 0;
+}
+//Alhamdulillah
+
