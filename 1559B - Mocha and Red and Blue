@@ -1,0 +1,124 @@
+/*بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+  Bismillah-ir-Rahman-ir-Rahim*/
+
+
+//Array
+/*initialize all value zero of a array char a[1024] = {0};*/
+//Vector
+/*initialize all value zero of a vector vector<int>vec(100,0);
+To erase 8th variable use myVector.erase(myVector.begin() + 7)
+To erase variable use myVector.swap(secondVector)*/
+//Stack
+/*Declaration of a stack is like vector.Taking input
+in stack using myStack.push(input);*/
+//Queue
+/*Declaration of a queue is queue <int> myQ;
+like vector and stack.Taking input in stack using myQ.push(input);*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define pi 3.14159265
+#define pb push_back
+
+
+int main()
+{
+    //ll t,x,y,j,i,z,p=0,q=0,d,mx=0;
+    //ll a,b,c,d,up,down,l,r,t,t1,t2,ans,ans1,ans2,w,h,w1,w2,h1,h2;
+    //char c;
+    ll t,sum,j,k,x,sa,sb,p,c,n,i;
+    cin>>t;
+    string s;
+    while(t--)
+    {
+        c=0;
+        cin>>n>>s;
+        for(i=0; i<n; i++)
+        {
+            if(s[i]=='?')
+                c++;
+            else
+                break;
+        }
+        if(c==n)
+        {
+            for(i=0; i<n; i++)
+            {
+                if(i%2==0)
+                    s[i]='R';
+                else
+                    s[i]='B';
+            }
+            cout<<s<<endl;
+            continue;
+        }
+        else if(c>0 && c<n)
+        {
+            if(s[c]=='R')
+            {
+                if(c%2==0)
+                {
+                    for(i=0; i<c; i++)
+                    {
+                        if(i%2==0)
+                            s[i]='R';
+                        else
+                            s[i]='B';
+                    }
+                }
+                else
+                {
+                    for(i=0; i<c; i++)
+                    {
+                        if(i%2==0)
+                            s[i]='B';
+                        else
+                            s[i]='R';
+                    }
+                }
+            }
+            else if(s[c]=='B')
+            {
+                if(c%2==0)
+                {
+                    for(i=0; i<c; i++)
+                    {
+                        if(i%2==0)
+                            s[i]='B';
+                        else
+                            s[i]='R';
+                    }
+                }
+                else
+                {
+                    for(i=0; i<c; i++)
+                    {
+                        if(i%2==0)
+                            s[i]='R';
+                        else
+                            s[i]='B';
+                    }
+                }
+            }
+            c=0;
+        }
+        if(c==0)
+        {
+            for(i=1; i<n; i++)
+            {
+                if(s[i]=='?' && s[i-1]=='R')
+                    s[i]='B';
+                else if(s[i]=='?' && s[i-1]=='B')
+                    s[i]='R';
+            }
+        }
+        cout<<s<<endl;
+    }
+
+return 0;
+}
+//Alhamdulillah
+
