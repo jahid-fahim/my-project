@@ -1,0 +1,69 @@
+/*بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+  Bismillah-ir-Rahman-ir-Rahim*/
+
+
+//Array
+/*initialize all value zero of a array char a[1024] = {0};*/
+//Vector
+/*initialize all value zero of a vector vector<int>vec(100,0);
+To erase 8th variable use myVector.erase(myVector.begin() + 7)
+To erase variable use myVector.swap(secondVector)*/
+//Stack
+/*Declaration of a stack is like vector.Taking input
+in stack using myStack.push(input);*/
+//Queue
+/*Declaration of a queue is queue <int> myQ;
+like vector and stack.Taking input in stack using myQ.push(input);*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define pi 3.14159265
+#define pb push_back
+
+
+int main()
+{
+    //ll t,x,y,j,i,z,p=0,q=0,d,mx=0;
+    //ll a,b,c,d,up,down,l,r,t,t1,t2,ans,ans1,ans2,w,h,w1,w2,h1,h2;
+    //char c;
+    ll t,r,x,y,m,j,k,p,c,n,i;
+    //cin>>t;
+    //string s;
+    //while(t--)
+    //{
+        ll ans=0;
+        cin>>n>>m>>x>>y;
+        cout<<x<<" "<<y<<endl;
+        cout<<"1"<<" "<<y<<endl;
+        for(i=1; i<=n; i++)
+        {
+            if(i%2!=0)
+            {
+                for(j=1; j<=m; j++)
+                {
+                    if(i==x && j==y || i==1 && j==y)
+                        continue;
+                    else
+                        cout<<i<<" "<<j<<endl;
+                }
+            }
+            else
+            {
+                for(j=m; j>=1; j--)
+                {
+                    if(i==x && j==y || i==1 && j==y)
+                        continue;
+                    else
+                        cout<<i<<" "<<j<<endl;
+                }
+            }
+        }
+   // }
+
+ return 0;
+}
+//Alhamdulillah
+
