@@ -1,0 +1,180 @@
+/*بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+  Bismillah-ir-Rahman-ir-Rahim*/
+
+
+//Array
+/*initialize all value zero of a array char a[1024] = {0};*/
+//Vector
+/*initialize all value zero of a vector vector<int>vec(100,0);
+To erase 8th variable use myVector.erase(myVector.begin() + 7)
+To erase variable use myVector.swap(secondVector)*/
+//Stack
+/*Declaration of a stack is like vector.Taking input
+in stack using myStack.push(input);*/
+//Queue
+/*Declaration of a queue is queue <int> myQ;
+like vector and stack.Taking input in stack using myQ.push(input);*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define pi 3.14159265
+#define pb push_back
+
+
+int main()
+{
+    //ll t,x,y,x1,y1,x2,y2,a,b,c,d,xx,yy;
+    //ll a,b,c,d,up,down,l,r,t,t1,t2,ans,ans1,ans2,w,h,w1,w2,h1,h2;
+    //char c;
+    int l,k,r,j,i,t,c,p;
+    cin>>t;
+    string s;
+    while(t--)
+    {
+        c=p=0;
+        cin>>k>>s;
+        int a[10]= {0};
+        for(i=0; i<k; i++)
+        {
+            c=s[i]-48;
+            a[c]++;
+        }
+        for(i=0; i<k; i++)
+        {
+            if(s[i]=='1' || s[i]=='4' || s[i]=='6' || s[i]=='8' || s[i]=='9')
+            {
+                cout<<"1"<<endl;
+                cout<<s[i]<<endl;
+                p=1;
+                break;
+            }
+        }
+        if(p)
+        {
+            p=0;
+            continue;
+        }
+        else
+        {
+            if(a[2]>1)
+            {
+                cout<<"2"<<endl;
+                cout<<"22"<<endl;
+            }
+            else if(a[3]>1)
+            {
+                cout<<"2"<<endl;
+                cout<<"33"<<endl;
+            }
+            else if(a[5]>1)
+            {
+                cout<<"2"<<endl;
+                cout<<"55"<<endl;
+            }
+            else if(a[7]>1)
+            {
+                cout<<"2"<<endl;
+                cout<<"77"<<endl;
+            }
+            else
+            {
+                for(i=0; i<k-1; i++)
+                {
+                    if(s[i]=='2')
+                    {
+                        for(j=i+1; j<k; j++)
+                        {
+                            if(s[j]=='5')
+                            {
+                                cout<<"2"<<endl;
+                                cout<<"25"<<endl;
+                                p=1;
+                                break;
+                            }
+                            else if(s[j]=='7')
+                            {
+                                cout<<"2"<<endl;
+                                cout<<"27"<<endl;
+                                p=1;
+                                break;
+                            }
+                        }
+                    }
+                    else if(s[i]=='3')
+                    {
+                        for(j=i+1; j<k; j++)
+                        {
+                            if(s[j]=='2')
+                            {
+                                cout<<"2"<<endl;
+                                cout<<"32"<<endl;
+                                p=1;
+                                break;
+                            }
+                            else if(s[j]=='5')
+                            {
+                                cout<<"2"<<endl;
+                                cout<<"35"<<endl;
+                                p=1;
+                                break;
+                            }
+                        }
+                    }
+                    else if(s[i]=='7')
+                    {
+                        for(j=i+1; j<k; j++)
+                        {
+                            if(s[j]=='2')
+                            {
+                                cout<<"2"<<endl;
+                                cout<<"72"<<endl;
+                                p=1;
+                                break;
+                            }
+                            else if(s[j]=='5')
+                            {
+                                cout<<"2"<<endl;
+                                cout<<"75"<<endl;
+                                p=1;
+                                break;
+                            }
+                        }
+                    }
+                    else if(s[i]=='5')
+                    {
+                        for(j=i+1; j<k; j++)
+                        {
+                            if(s[j]=='2')
+                            {
+                                cout<<"2"<<endl;
+                                cout<<"52"<<endl;
+                                p=1;
+                                break;
+                            }
+                            if(s[j]=='7')
+                            {
+                                cout<<"2"<<endl;
+                                cout<<"57"<<endl;
+                                p=1;
+                                break;
+                            }
+                        }
+                    }
+                    if(p)
+                    {
+                        p=0;
+                        break;
+                    }
+                }
+            }
+        }
+
+    }
+
+return 0;
+}
+//Alhamdulillah
+
