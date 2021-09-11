@@ -1,0 +1,101 @@
+/*بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+  Bismillah-ir-Rahman-ir-Rahim*/
+
+
+//Array
+/*initialize all value zero of a array char a[1024] = {0};*/
+//Vector
+/*initialize all value zero of a vector vector<int>vec(100,0);
+To erase 8th variable use myVector.erase(myVector.begin() + 7)
+To erase variable use myVector.swap(secondVector)*/
+//Stack
+/*Declaration of a stack is like vector.Taking input
+in stack using myStack.push(input);*/
+//Queue
+/*Declaration of a queue is queue <int> myQ;
+like vector and stack.Taking input in stack using myQ.push(input);*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define pi 3.14159265
+#define pb push_back
+
+
+int main()
+{
+    int t,ans,i,c,n,p,u,r,d,l,u1,r1,d1,l1;
+    //ll a,b,c,d,up,down,l,r,t,t1,t2,ans,ans1,ans2,w,h,w1,w2,h1,h2;
+    //char c;
+    //int x,m,j,i,t,c,p;
+    cin>>t;
+    //string s,s2;
+    while(t--)
+    {
+        ans=c=0;
+        cin>>n>>u>>r>>d>>l;
+        u1=u;
+        r1=r;
+        d1=d;
+        l1=l;
+        if(u==n)
+        {
+            l1--;
+            r1--;
+        }
+        if(d==n)
+        {
+            l1--;
+            r1--;
+        }
+        if(l==n)
+        {
+            u1--;
+            d1--;
+        }
+        if(r==n)
+        {
+            u1--;
+            d1--;
+        }
+        if(u==n-1)
+        {
+            if(r1>l1)
+                r1--;
+            else
+                l1--;
+        }
+        if(d==n-1)
+        {
+            if(r1>l1)
+                r1--;
+            else
+                l1--;
+        }
+        if(l==n-1)
+        {
+            if(u1>d1)
+                u1--;
+            else
+                d1--;
+        }
+        if(r==n-1)
+        {
+            if(u1>d1)
+                u1--;
+            else
+                d1--;
+        }
+
+        if(u1<0 || d1<0 || r1<0 || l1<0)
+            cout<<"NO"<<endl;
+        else
+            cout<<"YES"<<endl;
+    }
+    
+    return 0;
+}
+//Alhamdulillah
+
