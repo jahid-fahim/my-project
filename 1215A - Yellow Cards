@@ -1,0 +1,110 @@
+/*بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+  Bismillah-ir-Rahman-ir-Rahim*/
+
+
+//Array
+/*initialize all value zero of a array char a[1024] = {0};*/
+//Vector
+/*initialize all value zero of a vector vector<int>vec(100,0);
+To erase 8th variable use myVector.erase(myVector.begin() + 7)
+To erase variable use myVector.swap(secondVector)*/
+//Stack
+/*Declaration of a stack is like vector.Taking input
+in stack using myStack.push(input);*/
+//Queue
+/*Declaration of a queue is queue <int> myQ;
+like vector and stack.Taking input in stack using myQ.push(input);*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define pi 3.14159265
+#define pb push_back
+
+
+int main()
+{
+    int a1,a2,k1,k2,n,ans=0,p=0;
+    //ll a,b,c,d,up,down,l,r,t,t1,t2,ans,ans1,ans2,w,h,w1,w2,h1,h2;
+    //char c;
+    //int x,m,j,i,t,c,p;
+    cin>>a1>>a2>>k1>>k2>>n;
+    int mn=a1*(k1-1)+a2*(k2-1);
+    mn=n-mn;
+    if(k1<k2)
+    {
+        while(1)
+        {
+            while(a1*k1<=n)
+            {
+                ans+=a1;
+                n-=(a1*k1);
+                p=1;
+                break;
+            }
+            if(p)
+            {
+                p=0;
+                while(1)
+                {
+                    while(a2*k2<=n)
+                    {
+                        ans+=a2;
+                        n-=(a2*k2);
+                        p=1;
+                        break;
+                    }
+                    if(p)
+                        break;
+                    a2--;
+                }
+            }
+            a1--;
+            if(p)
+                break;
+        }
+    }
+    else
+    {
+        while(1)
+        {
+            while(a2*k2<=n)
+            {
+                ans+=a2;
+                n-=(a2*k2);
+                p=1;
+                break;
+            }
+            if(p)
+            {
+                p=0;
+                while(1)
+                {
+                    while(a1*k1<=n)
+                    {
+                        ans+=a1;
+                        n-=(a1*k1);
+                        p=1;
+                        break;
+                    }
+                    if(p)
+                        break;
+                    a1--;
+                }
+            }
+            a2--;
+            if(p)
+                break;
+        }
+    }
+    if(mn>0)
+        cout<<mn<<" "<<ans<<endl;
+    else
+        cout<<"0"<<" "<<ans<<endl;
+
+ return 0;
+}
+//Alhamdulillah
+
