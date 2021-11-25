@@ -1,0 +1,72 @@
+/*بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+  Bismillah-ir-Rahman-ir-Rahim*/
+
+
+//Array
+/*initialize all value zero of a array char a[1024] = {0};*/
+//Vector
+/*initialize all value zero of a vector vector<int>vec(100,0);
+To erase 8th variable use myVector.erase(myVector.begin() + 7)
+To erase variable use myVector.swap(secondVector)*/
+//Stack
+/*Declaration of a stack is like vector.Taking input
+in stack using myStack.push(input);*/
+//Queue
+/*Declaration of a queue is queue <int> myQ;
+like vector and stack.Taking input in stack using myQ.push(input);*/
+//Type cast
+//To type cast a character into integer use int x = (int)character - 48;
+
+
+
+#include<bits/stdc++.h>
+#include <sstream>
+using namespace std;
+
+#define ll long long
+#define pi 3.14159265
+#define pb push_back
+
+
+int main()
+{
+    ll t,n,i,p;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        stringstream ss ;
+        ss << n ;
+        string s ;
+        ss >> s;
+        if(n%2==0)
+        {
+            cout<<"0"<<endl;
+            continue;
+        }
+        else
+        {
+            i=0;
+            p=-1;
+            while(i<s.length())
+            {
+                if((int)s[i]%2==0)
+                {
+                    p=1;
+                    break;
+                }
+                i++;
+            }
+            if(p==1 && i==0)
+                cout<<"1"<<endl;
+            else if(p==1 && i!=0)
+                cout<<"2"<<endl;
+            else
+                cout<<"-1"<<endl;
+        }
+    }
+
+return 0;
+}
+//Alhamdulillah
+
