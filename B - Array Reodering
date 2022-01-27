@@ -1,0 +1,72 @@
+/*بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+  Bismillah-ir-Rahman-ir-Rahim*/
+
+//Array
+/*initialize all value zero of a array char a[1024] = {0};*/
+//Vector
+/*initialize all value zero of a vector vector<int>vec(100,0);
+To erase 8th variable use myVector.erase(myVector.begin() + 7)
+To erase variable use myVector.swap(secondVector)*/
+//Stack
+/*Declaration of a stack is like vector.Taking input
+in stack using myStack.push(input);*/
+//Queue
+/*Declaration of a queue is queue <int> myQ;
+like vector and stack.Taking input in stack using myQ.push(input);*/
+//Type cast
+//To type cast a character into integer use int x = (int)character - 48;
+
+#include<bits/stdc++.h>
+#include <sstream>
+#include <algorithm>
+using namespace std;
+
+#define ll long long
+#define pi 3.14159265
+#define pb push_back
+
+/*int gcd(int a,int b)
+{
+    if(a%b==0) return b;
+    else gcd(b,a%b);
+}*/
+
+int main()
+{
+    int t,n;
+    cin>>t;
+    while(t--)
+    {
+        int good_pair = 0,x;
+        cin>>n;
+        vector<int>even,odd;
+        for(int i=0; i<n; i++)
+        {
+            cin>>x;
+            if(x%2==0)
+            {
+                even.pb(x);
+            }
+            else{
+
+                odd.pb(x);
+            }
+        }
+        for(int i=0; i<even.size(); i++)
+        {
+            good_pair+=(n-i-1);
+        }
+        for(int i=0; i<odd.size(); i++)
+        {
+            for(int j=i+1; j<odd.size(); j++)
+            {
+                if(__gcd(odd[i],2*odd[j])>1) good_pair++;
+            }
+        }
+        cout<<good_pair<<endl;
+    }
+
+ return 0;
+}
+//Alhamdulillah
+
