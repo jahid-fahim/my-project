@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+#include <sstream>
+#include <algorithm>
+using namespace std;
+
+#define ll long long
+#define pi 3.14159265
+#define pb push_back
+
+int main()
+{
+    int t,n;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        int a[n],b[n],sum = 0,c = 0;
+        for(int i=0; i<n; i++)
+        {
+            cin>>a[i];
+            b[i] = a[i];
+            if(a[i]>=0)
+            {
+                sum+=a[i];
+                c = 1;
+            }
+        }
+        if(c==0)
+        {
+            sort(b,b+n);
+            sum = b[n-1];
+
+        }
+        int mx = a[0],mx_end = 0;
+        for(int i=0; i<n; i++)
+        {
+            mx_end+=a[i];
+            if(mx_end>mx)
+            {
+                mx = mx_end;
+            }
+            if(mx_end<0)
+            {
+                mx_end = 0;
+            }
+        }
+        cout<<mx<<" "<<sum<<endl;
+    }
+
+    return 0;
+}
+//Alhamdulillah
